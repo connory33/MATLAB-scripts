@@ -17,14 +17,12 @@ classdef Interval < handle
         
         function w = getWidth(self)
         % Return the width of the Interval
-            %%%% Write your code below %%%%
             w= self.right - self.left;
         
         end
         
         function scale(self, f)
         % Scale self by a factor f
-            %%%% Modify the code below, making effective use of getWidth %%
             
             w= self.right - self.left;
 
@@ -45,7 +43,6 @@ classdef Interval < handle
         function Inter = add(self, other)
         % Inter is the new Interval formed by adding self and the 
         % the other Interval
-            %%%% Write your code below %%%%
             
         
         
@@ -64,11 +61,10 @@ classdef Interval < handle
         
         function disp(self)
         % Display self, if not empty, in this format: (left,right)
-        % If empty, display 'Empty <classname>'
             if isempty(self)
                 fprintf('Empty %s\n', class(self))
             elseif length(self)>1
-                disp@handle(self)  % syntax to be discussed next lecture
+                disp@handle(self)
             else
                 fprintf('(%f,%f)\n', self.left, self.right)
             end
